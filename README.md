@@ -1,7 +1,5 @@
-# CRUD em React e Redux usando a fakeAPI 
+# CRUD em React Redux usando a fakeAPI 
 
-
-# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
