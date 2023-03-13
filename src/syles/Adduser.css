@@ -1,0 +1,15 @@
+.style {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20em;
+    height: 22em;
+    background-color: azure;
+    border-radius: 0.4em;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    }

@@ -19,7 +19,7 @@ const style = {
   height: '22em',
   bgcolor: 'background.paper',
   borderRadius: '0.4em',
-  boxShadow: 24,
+  boxShadow: 54,
   p: 4,
   display: 'flex',
   flexDirection: 'column',
@@ -95,7 +95,7 @@ export default function AddUser() {
 
     return (
         <div>
-        <LoadingButton onClick={handleOpen}  sx={{display: 'flex', margin: 'auto'}} variant="contained"><AddIcon/></LoadingButton>
+        <LoadingButton onClick={handleOpen}  sx={{display: 'flex', margin: 'auto'}} variant="contained" style={{ backgroundColor: 'green', color: 'white' }}><AddIcon/></LoadingButton>
         <Modal
             open={open}
             onClose={handleClose}
@@ -107,7 +107,7 @@ export default function AddUser() {
                 <TextField onChange={(e)=>{handleChange(e.target.name, e.target.value)}} name="lastname" label="Last Name" variant="outlined" />
                 <TextField onChange={(e)=>{handleChange(e.target.name, e.target.value)}} name="email" label="E-mail" variant="outlined" />
                 <TextField onChange={(e)=>{handleChange(e.target.name, e.target.value)}} name="username" label="Username" variant="outlined" />
-                <LoadingButton loading={btnLoading} onClick={addUser} variant="contained">Save changes</LoadingButton>
+                <LoadingButton loading={btnLoading} onClick={addUser} variant="contained" style={{ backgroundColor: 'green', color: 'white' }}>Save</LoadingButton>
             </Box>
         </Modal>
         </div>

@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import Box from '@mui/material/Box';  
 import ListItem from '@mui/material/ListItem';
-import PersonIcon from '@mui/icons-material/Person';
-import EmailIcon from '@mui/icons-material/Email';
-import Grid3x3Icon from '@mui/icons-material/Grid3x3';
+
 import DeleteIcon from '@mui/icons-material/Delete';
 import LoadingButton from '@mui/lab/LoadingButton';
 
@@ -52,14 +50,14 @@ function UserListItem(props: Props){
     return (
         <ListItem key={user.id} sx={{border: '0.1em solid #d3d3d3', borderRadius: '0.4em', marginBottom: '1em', display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
             <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start'}}>
-                <Box sx={{fontWeight: 'bold', fontSize: '1.3em', marginBottom: '0.8em', display: 'flex', alignItems: 'center'}}> <Box sx={{marginRight: '0.5em', marginTop: '0.3em'}}><PersonIcon/></Box> {user.name.firstname + ' ' + user.name.lastname}</Box>
-                <Box sx={{fontSize: '1em', marginBottom: '0.5em', display: 'flex', alignItems: 'center'}}><Box sx={{marginRight: '0.5em', marginTop: '0.3em'}}><EmailIcon/></Box> {user.email}</Box>
-                <Box sx={{fontSize: '1em', marginBottom: '0.5em', display: 'flex', alignItems: 'center'}}> <Box sx={{marginRight: '0.5em', marginTop: '0.3em'}}><Grid3x3Icon/></Box>{user.username}</Box>
+                <Box sx={{fontWeight: 'bold', fontSize: '1.3em', marginBottom: '0.8em', display: 'flex', alignItems: 'center'}}> <Box sx={{marginRight: '0.5em', marginTop: '0.3em'}}></Box> {user.name.firstname + ' ' + user.name.lastname}</Box>
+                <Box sx={{fontSize: '1em', marginBottom: '0.5em', display: 'flex', alignItems: 'center'}}><Box sx={{marginRight: '0.5em', marginTop: '0.3em'}}></Box> {user.email}</Box>
+                <Box sx={{fontSize: '1em', marginBottom: '0.5em', display: 'flex', alignItems: 'center'}}> <Box sx={{marginRight: '0.5em', marginTop: '0.3em'}}></Box>{user.username}</Box>
             </Box>
             
             <Box sx={{display: 'flex', flexDirection: 'column'}}>
                 <EditModal user={user}/>
-                <LoadingButton loading={btnLoading.filter(btn => btn === user.id)[0] ? true : false} onClick={()=>{deleteUser(user.id)}} variant="contained"><DeleteIcon/></LoadingButton>
+                <LoadingButton loading={btnLoading.filter(btn => btn === user.id)[0] ? true : false} onClick={()=>{deleteUser(user.id)}} variant="contained" style={{ backgroundColor: 'red', color: 'white' }}><DeleteIcon/></LoadingButton>
             </Box>
 
         </ListItem>

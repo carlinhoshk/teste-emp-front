@@ -1,0 +1,47 @@
+.list-item {
+    border: 0.1em solid #d3d3d3;
+    border-radius: 0.4em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .item-details__name {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 0.8em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-details__email {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-details__username {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-icon {
+    margin-right: 0.5em;
+    margin-top: 0.3em;
+  }
+  
+  .item-actions {
+    display: flex;
+    flex-direction: column;
+  }
+  

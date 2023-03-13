@@ -89,7 +89,7 @@ export default function EditModal(props: Props) {
 
   return (
     <div>
-      <LoadingButton onClick={handleOpen}  sx={{marginBottom: '1em'}} variant="contained"><EditIcon/></LoadingButton>
+      <LoadingButton onClick={handleOpen}  sx={{marginBottom: '1em'}} variant="contained" style={{ backgroundColor: 'blue', color: 'white' }}><EditIcon/></LoadingButton>
       <Modal
         open={open}
         onClose={handleClose}
@@ -101,7 +101,7 @@ export default function EditModal(props: Props) {
             <TextField onChange={(e)=>{handleChange(e.target.name, e.target.value)}} name="lastname" defaultValue={user.name.lastname} id="outlined-basic" label="Last Name" variant="outlined" />
             <TextField onChange={(e)=>{handleChange(e.target.name, e.target.value)}} name="email" defaultValue={user.email} id="outlined-basic" label="E-mail" variant="outlined" />
             <TextField onChange={(e)=>{handleChange(e.target.name, e.target.value)}} name="username" defaultValue={user.username} id="outlined-basic" label="Username" variant="outlined" />
-            <LoadingButton  loading={btnLoading.filter(btn => btn === user.id)[0] ? true : false} onClick={(()=>{saveChanges(user.id)})} variant="contained">Save changes</LoadingButton>
+            <LoadingButton  loading={btnLoading.filter(btn => btn === user.id)[0] ? true : false} onClick={(()=>{saveChanges(user.id)})} variant="contained" style={{ backgroundColor: 'green', color: 'white' }}>Save</LoadingButton>
         </Box>
       </Modal>
     </div>
